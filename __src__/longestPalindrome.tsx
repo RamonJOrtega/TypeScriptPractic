@@ -29,8 +29,6 @@ export const longestPalendrome = (string: string): number => {
                 numSolos++
                 result = result + 1
             }
-           
-         
         }
         if (letterObj[letter]%2 === 0) {
             result = result + letterObj[letter]
