@@ -1,43 +1,26 @@
-export const longestPalendrome = (string: string): number => {
-    
-    const letterObj: {[key: string]: number} = {};
-    for (let i = 0; i < string.length; i++) {
-        const letter = string[i];
-        if (letterObj[letter]) {
-            letterObj[letter] = letterObj[letter] + 1;
-        } else {
-            letterObj[letter] = 1;
-        }
-        
+export function generate(numRows: number): number[][] {
+    if (numRows < 1) {
+        return []
     }
-    console.log(letterObj)
+    //   1
+    //  1 1
+    // 1 2 1
+    //1 3 3 1//
+    //1 4 6 4 1//
+    let numRowValues: number[][] = []
 
-    //each letter pair can be part of a palendrome
-    // if one solo letter, than it can be part of a palendrom
-    // if two solo letter, then can't be palandrom
-    // if 3 solo letter, then can't be plandrom
-    // if 4 solo cant
-    let result: number = 0;
-    let numSolos: number = 0;
-    for (const letter in letterObj) {
-        console.log(letterObj[letter])
-        if (letterObj[letter] % 2 === 1) {
-            if (numSolos > 1) {
-                numSolos = numSolos;
-                result = result;
+    for (let i = 0; i < numRows; i++) {
+        numRowValues.push([])
+        const numCols = i + 1;
+        for (let j = 0; j < numCols; j++) {
+            if (j === 0 || j === numCols-1) {
+                numRowValues[i][j] = 1
             } else {
-                numSolos++
-                result = result + 1
+            numRowValues[i][j] = numRowValues[i-1][j-1] + numRowValues[i-1][j];
             }
-           
-         
-        }
-        if (letterObj[letter]%2 === 0) {
-            result = result + letterObj[letter]
-        }
+        }      
     }
+        
+    return numRowValues
     
-    return result
-
-
 }

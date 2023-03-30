@@ -1,22 +1,19 @@
 {
-  "name": "typescriptpractic",
+  "name": "typescriptpractice",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/RamonJOrtega/TypeScriptPractic.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/RamonJOrtega/TypeScriptPractic/issues"
-  },
-  "homepage": "https://github.com/RamonJOrtega/TypeScriptPractic#readme",
-  "devDependencies": {
+  "type": "module",
+  "dependencies": {
+    "jest": "^29.5.0",
+    "save-dev": "^0.0.1-security",
     "typescript": "^5.0.2"
-  }
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
