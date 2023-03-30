@@ -1,6 +1,6 @@
-import { Chicken } from "./chicken.js"
-import { longestPalendrome } from "./longestPalindrome.js"
-import { generate } from "./pascalsTriangle.js"
+// import { Chicken } from "./chicken.js"
+//import { longestPalendrome } from "./longestPalindrome"
+ import { generate } from "./pascalsTriangle"
 
 
 console.log('INDEX.JS ENTRY POINT')

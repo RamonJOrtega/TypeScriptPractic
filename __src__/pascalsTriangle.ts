@@ -20,7 +20,6 @@ export function generate(numRows: number): number[][] {
             }
         }      
     }
-        
+    console.log(numRowValues)
     return numRowValues
-    
 }
