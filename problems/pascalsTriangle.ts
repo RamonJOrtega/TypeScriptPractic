@@ -1,4 +1,4 @@
-export function generate(numRows: number): number[][] {
+ export const generate = (numRows: number): number[][] => {
     if (numRows < 1) {
         return []
     }
@@ -10,7 +10,7 @@ export function generate(numRows: number): number[][] {
     let numRowValues: number[][] = []
 
     for (let i = 0; i < numRows; i++) {
-        numRowValues.push([])
+        numRowValues.push([]);
         const numCols = i + 1;
         for (let j = 0; j < numCols; j++) {
             if (j === 0 || j === numCols-1) {
@@ -23,3 +23,4 @@ export function generate(numRows: number): number[][] {
     console.log(numRowValues)
     return numRowValues
 }
+

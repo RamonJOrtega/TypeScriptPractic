@@ -1,4 +1,4 @@
-import { generate } from '../__src__/pascalsTriangle';
+import { generate } from '../problems/pascalsTriangle';
 
 describe('generate function', () => {
   test('returns an empty array if numRows is less than 1', () => {
